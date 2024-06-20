@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="GtkWindow" id="window">
+        <property name="title">Window dois</property>
+        <property name="default-width">200</property>
+        <property name="default-height">200</property>
+        <child>
+            <object class="GtkBox" id="box">
+                <property name="orientation">vertical</property>
+                <property name="spacing">10</property>
+                <child>
+                    <object class="GtkButton" id="button2">
+                        <property name="label">Botao 2</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkButton" id="button3">
+                        <property name="label">Botao 3</property>
+                    </object>
+                </child>
+            </object>
+        </child>
+    </object>
+</interface>

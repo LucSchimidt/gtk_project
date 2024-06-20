@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="GtkWindow" id="window">
+        <property name="title">Notas Dinâmicas</property>
+        <property name="default-width">800</property>
+        <property name="default-height">400</property>
+        <property name="resizable">False</property>
+        <child>
+            <object class="GtkBox" id="main">
+                <property name="orientation">vertical</property>
+                <property name="spacing">10</property>
+                <!-- MenuBar da aplicacao:-->
+                <child>
+                    <object class="GtkMenuBar" id="menubar">
+                        <child>
+                            <object class="GtkMenuItem" id="file">
+                                <property name="label">Arquivo</property>
+                                <child type="submenu">
+                                    <object class="GtkMenu" id="file_menu">
+                                        <child>
+                                            <object class="GtkMenuItem" id="new">
+                                                <property name="label">Novo arquivo</property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="GtkMenuItem" id="open">
+                                                <property name="label">Abrir arquivo existente</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkMenuItem" id="edit">
+                                <property name="label">Editar</property>
+                                <child type="submenu">
+                                    <object class="GtkMenu" id="edit_menu">
+                                        <child>
+                                            <object class="GtkMenuItem" id="nuevo">
+                                                <property name="label">Novo</property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="GtkMenuItem" id="abrir">
+                                                <property name="label">Abrir</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+                <!-- Box com os elementos principais da tela:-->
+                <child>
+                    <!-- Contêiner GtkBox vertical -->
+                    <object class="GtkBox" id="box">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">10</property>
+                        <property name="homogeneous">false</property>
+                        <property name="expand">true</property>
+                        <property name="valign">center</property> <!-- Centralizar verticalmente -->
+
+                        <!-- Espaçador para preencher o espaço acima do label -->
+                        <child>
+                            <object class="GtkBox" id="spacer_top">
+                            </object>
+                            <packing>
+                                <property name="expand">true</property>
+                                <property name="fill">true</property>
+                            </packing>
+                        </child>
+
+                        <!-- Label com a mensagem inicial da aplicação: -->
+                        <child>
+                            <object class="GtkLabel" id="label">
+                                <property name="label">Bem-vindo! Vamos criar um novo arquivo de texto?</property>
+                                <property name="halign">center</property> <!-- Centralizar horizontalmente -->
+                            </object>
+                            <packing>
+                                <property name="expand">false</property>
+                                <property name="fill">false</property>
+                            </packing>
+                        </child>
+
+                        <!-- Botão de ação: -->
+                        <child>
+                            <object class="GtkButton" id="button">
+                                <property name="label">Criar novo projeto</property>
+                                <property name="halign">center</property> <!-- Centralizar horizontalmente -->
+                                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
+                            </object>
+                            <packing>
+                                <property name="expand">false</property>
+                                <property name="fill">false</property>
+                            </packing>
+                        </child>
+
+                        <!-- Espaçador para preencher o espaço abaixo do botão -->
+                        <child>
+                            <object class="GtkBox" id="spacer_bottom">
+                            </object>
+                            <packing>
+                                <property name="expand">true</property>
+                                <property name="fill">true</property>
+                            </packing>
+                        </child>
+
+                    </object>
+                </child>
+            </object>
+        </child>
+    </object>
+</interface>
